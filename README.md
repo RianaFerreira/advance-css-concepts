@@ -39,3 +39,8 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * attribute selector
 * :not pseudo-class
 * calc() vs simple Sass operations
+
+* background-clip with text
+* transform multiple properties
+* outline-offset with outline
+* styling without hover
