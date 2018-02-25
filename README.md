@@ -1,5 +1,27 @@
 # Advanced CSS concepts
 
+## Setup
+```
+$ cd project folder
+$ npm init
+$ npm install sass-node --save-dev  # compile scss to css
+$ npm install live-server -g        # auto reload app when css changes
+$ touch main.css
+```
+
+## Run the app
+
+```
+  $ live-server
+```
+Continuously compile scss to css in another tab.
+```
+$ npm run compile:sass
+```
+
+Open the app in the browser with url `http://127.0.0.1:8080/`
+
+## Content Overview
 * basic reset using the universal selector
 * project wide font definitions
 * clip-path
