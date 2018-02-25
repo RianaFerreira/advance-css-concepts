@@ -9,6 +9,7 @@
 
   @include clearfix;
 
+  /* attribute selector */
   [class^="col-"] {
     // background-color: green;
     float: left;

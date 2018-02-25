@@ -44,3 +44,6 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * transform multiple properties
 * outline-offset with outline
 * styling without hover
+
+* font icon from linea.io
+* direct child selector
