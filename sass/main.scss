@@ -1,0 +1,25 @@
+/*********************** PARTIAL IMPORTS **************************/
+
+/* ABSTRACTS - won't output any css */
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+/* BASE - basic project boilerplate */
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+/* COMPONENTS - reusable building blocks */
+@import "components/button";
+
+/* LAYOUT - each component of the global layout */
+@import "layout/header";
+
+/* PAGES - styles specific to each page in the app */
+@import "pages/home";
+
+/* THEMES - web app with different themes */
+
+/* VENDOR - 3rd party css */

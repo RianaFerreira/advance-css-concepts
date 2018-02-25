@@ -1,0 +1,236 @@
+/** ORIGINAL CSS CLASSES MOVED INTO THE MAIN.SCSS FILE **/
+/** SCSS is compiled to the css/main.css file          **/
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* normalize css no longer needed - most modern browsers handle it already
+   Reset styles across the whole site here.
+*/
+
+/* universal selector */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Setting the root font size
+   1rem = 10px
+   All other px values can be divided by 10 => rem
+*/
+html {
+  /* Bad practive to set px font size - it overrides the user agent */
+  /* font-size: 10px; */
+  /* user-agent font-size 100% => 10 / 16 => 0.625 */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  color: #777;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 3rem;
+}
+
+/* HEADING CONTAINER */
+.header {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.8),
+    rgba(40, 180, 131, 0.8)),
+  url(../img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  height: 95vh;
+
+  /* Parent postion for logo and heading text */
+  position: relative;
+}
+
+/* LOGO */
+.header__logo-box {
+  left: 4rem;
+  /* child position in relation to .header parent */
+  position: absolute;
+  top: 4rem;
+}
+
+.header__logo {
+  height: 3.5rem;
+}
+
+/* HEADING TEXT CONTAINER */
+.header__text-box {
+  left: 50%;
+  /* child position in relation to .header parent */
+  position: absolute;
+  text-align: center;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+/* HEADING TEXT */
+.heading-primary {
+  /* avoid the animation from moving up on completion */
+  backface-visibility: hidden;
+  color: #fff;
+  margin-bottom: 6rem;
+  text-transform: uppercase;
+}
+
+.heading-primary--main {
+  animation-duration: 1s;
+  animation-name: moveInLeft;
+  animation-timing-function: ease-out;
+
+  /*
+  animation-delay: 2s;
+  animation-iteration-count: 2;
+  */
+
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+}
+
+.heading-primary--sub {
+  animation: moveInRight 1s ease-out;
+
+  /* animation-name: moveInRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-out */
+
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* Discover Button */
+.btn:link,
+.btn:visited {
+  border-radius: 10rem;
+  display: inline-block;
+  font-size: 1.6rem;
+  padding: 1.5rem 4rem;
+
+  /* parent position for pseudo element */
+  position: relative;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  /* must be on initial state  */
+  transition: all .2s;
+}
+
+.btn:hover {
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+  transform: translateY(-3px);
+}
+
+/* on click */
+.btn:active {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+  transform: translateY(-1px);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+/* treated as child of .btn */
+.btn::after {
+  content: "";
+  border-radius: 10rem;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+
+  /* position in relation to .btn parent */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  /* animation should be applied to initial state */
+  transition: all .4s;
+}
+
+/* after pseudo element */
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  opacity: 0;
+  transform: scaleX(1.4) scaleY(1.6);
+}
+
+.btn--animated {
+  animation: moveInBottom 1s ease-out .75;
+  /* apply the keyframe 0% properties before the animation starts */
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  80% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

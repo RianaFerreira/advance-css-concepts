@@ -8,3 +8,12 @@
 * pseudo-elements and pseudo-classes
 * ::after pseudo-element
 * hover animation effect with transition property
+* convert px to rem
+
+* Block Element Modifier css selectors
+* 7 - 1 css framework pattern
+
+* Simple grid system
+* attribute selector
+* :not pseudo-class
+* calc() vs simple Sass operations

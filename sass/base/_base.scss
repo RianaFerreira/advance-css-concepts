@@ -1,0 +1,29 @@
+// Low level basics
+// resets, css for html and body only selectors
+
+/* universal selector */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Setting the root font size
+   1rem = 10px
+   All other px values can be divided by 10 => rem
+*/
+html {
+  /* Bad practive to set px font size - it overrides the user agent
+     font-size: 10px;
+     
+     user-agent font-size 100% => 10 / 16 => 0.625
+     This defines what 1 rem is.
+  */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+}
