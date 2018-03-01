@@ -47,3 +47,9 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 
 * font icon from linea.io
 * direct child selector
+
+### rotating card effect
+* perspective in CSS
+* backface-visibility property
+* background blend modes
+* box-decoration-break

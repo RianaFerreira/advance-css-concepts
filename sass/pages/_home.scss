@@ -15,10 +15,16 @@
 
   /* Skew the layout of the background image */
   transform: skewY(-7deg);
-  margin-top: -20vh;
+  margin-top: -10rem;
 
   /* direct child selector of .section-features */
   & > * {
     transform: skewY(7deg);
   }
+}
+
+.section-tours {
+  background-color: $color-grey-light;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem;
 }
