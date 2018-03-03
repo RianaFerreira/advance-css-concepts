@@ -1,0 +1,75 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba($color-black, .1);
+  background-color: rgba($color-white, .6);  // make background opaque
+  border-radius: 3px;
+  font-size: $default-font-size;
+  padding: 6rem;
+  padding-left: 9rem;  // expand the padding to cover the nested shape content
+  transform: skewX(-12deg);  // can't assign more than one transform property per element
+
+  &__shape {
+    // shape-outside define size and position for content flowing
+    // around the shape
+    // provide radius - calc based on height and width
+    // element must be floated and define height and width
+    float: left;
+    height: 15rem;
+    width: 15rem;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+
+    // shape of element the content flows around
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+
+    // contrast shape orientation in relation to background
+    transform: translateX(-3rem) skewX(12deg);
+
+    position: relative;  // positioning for child element
+  }
+
+  &__img {
+    height: 100%;  // restrict image to the parent element size
+
+    // display image in center of shape and zoom in
+    backface-visibility: hidden;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s;
+  }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: $color-white;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+
+    // hide the caption initially
+    opacity: 0;
+    transform: translate(-50%, 20%);
+    transition: all .5s;
+    backface-visibility: hidden;
+  }
+
+  &__text {
+    // contrast text orientation in relation to background
+    transform: skewX(12deg);
+  }
+
+  &:hover &__caption {
+    // show the caption on hover
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transform: translateX(-4rem) scale(1);
+
+    // blur and darken the image - lower number darker
+    filter: blur(3px) brightness(80%);
+  }
+}

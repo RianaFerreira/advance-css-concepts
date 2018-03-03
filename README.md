@@ -32,24 +32,45 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * hover animation effect with transition property
 * convert px to rem
 
+### Organising CSS
 * Block Element Modifier css selectors
 * 7 - 1 css framework pattern
 
-* Simple grid system
+
+### Simple grid system
 * attribute selector
 * :not pseudo-class
 * calc() vs simple Sass operations
 
+### Floating panel effect
 * background-clip with text
 * transform multiple properties
 * outline-offset with outline
 * styling without hover
-
+* clearfix
 * font icon from linea.io
 * direct child selector
 
-### rotating card effect
+### Rotating card effect
+* positioning child element relative to parent
 * perspective in CSS
 * backface-visibility property
 * background blend modes
 * box-decoration-break
+
+
+### Wrap text around shapes
+* shape-outside
+* float
+* image filters
+
+### Background video
+* <video> element
+* object-fit property
+
+### Booking form
+* solid-color gradient
+* general and adjacent sibling selector
+* ::input-placeholder
+* :focus, :invalid, :placeholder-shown, :checked pseudo classes
+* custom radio buttons
