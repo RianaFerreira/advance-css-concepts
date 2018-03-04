@@ -74,3 +74,9 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * ::input-placeholder
 * :focus, :invalid, :placeholder-shown, :checked pseudo classes
 * custom radio buttons
+
+### Navigation
+* checkbox hack
+* custom animation timing functions using cubic bezier curves
+* animate solid-color gradients
+* transform-origin
