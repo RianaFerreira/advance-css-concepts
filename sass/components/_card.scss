@@ -7,7 +7,7 @@
   height: 52rem;  // needed because absolute positioning of child collapses parent height
 
   &__side {
-    border-radius: 3px;
+    border-radius: $border-radius-default;
     overflow: hidden;  // avoid image overlay hiding the border radius
 
     box-shadow: 0 1.5rem 4rem $shadow-black;

@@ -12,14 +12,17 @@
 @import "base/utilities";
 
 /* COMPONENTS - reusable building blocks */
+@import "components/booking";
 @import "components/button";
 @import "components/card";
 @import "components/composition";
 @import "components/feature-box";
+@import "components/form";
 @import "components/story";
 @import "components/video";
 
 /* LAYOUT - each component of the global layout */
+@import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
 
