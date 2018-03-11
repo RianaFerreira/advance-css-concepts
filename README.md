@@ -85,3 +85,24 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * target pseudo-class
 * display: table-cell for boxes with equal height
 * text formatting - columns and hyphenate words
+
+### Responsive design
+* mobile first vs desktop first
+* breakpoints based on groups of devices
+* use sass mixin for media queries
+* @content and @iff sass directives
+* Chrome responsive design DevTool
+
+### References
+Jonas Schmedtmann resources http://codingheroes.io/resources/
+Video background images https://coverr.co/
+Images https://unsplash.com/
+Lorem ipsum
+https://hipsum.co/
+http://star-wars-ipsum.herokuapp.com/
+SVG icons https://css-tricks.com/pretty-good-svg-icon-system/
+CSS special characters https://css-tricks.com/snippets/html/glyphs/
+Clip-path https://bennettfeely.com/clippy/
+Easing functions
+http://easings.net/#easeInOutBack
+Cubic-bezier http://cubic-bezier.com/#.17,.67,.83,.67
