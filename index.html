@@ -52,7 +52,7 @@
           </h1>
 
           <!-- Discover Button -->
-          <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+          <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
 
       </header>
@@ -136,7 +136,8 @@
           </div>
         </section>
 
-        <section class="section-tours">
+        <!-- ANCHOR ID TO THE POPUP -->
+        <section class="section-tours" id="section-tours">
           <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">
               Most popular tours
@@ -174,7 +175,7 @@
                       <p class="card__price-only">Only</p>
                       <p class="card__price-value">$297</p>
                     </div>
-                    <a href="#" class="btn btn--white">Book now!</a>
+                    <a href="#popup" class="btn btn--white">Book now!</a>
                   </div>
                 </div>
               </div>
@@ -210,7 +211,7 @@
                       <p class="card__price-only">Only</p>
                       <p class="card__price-value">$497</p>
                     </div>
-                    <a href="#" class="btn btn--white">Book now!</a>
+                    <a href="#popup" class="btn btn--white">Book now!</a>
                   </div>
                 </div>
               </div>
@@ -246,7 +247,7 @@
                       <p class="card__price-only">Only</p>
                       <p class="card__price-value">$897</p>
                     </div>
-                    <a href="#" class="btn btn--white">Book now!</a>
+                    <a href="#popup" class="btn btn--white">Book now!</a>
                   </div>
                 </div>
               </div>
@@ -385,6 +386,32 @@
           </div>
         </div>
       </footer>
+
+      <div class="popup" id="popup">
+        <div class="popup__content">
+          <!-- IMAGES -->
+          <div class="popup__left">
+            <img src="img/nat-8.jpg" alt="Person on tour" class="popup__img">
+            <img src="img/nat-9.jpg" alt="Person on tour" class="popup__img">
+          </div>
+
+          <!-- TEXT & OPTION TO CLOSE POPUP -->
+          <div class="popup__right">
+            <a href="#section-tours" class="popup__close">&times;</a>
+
+            <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+            <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read the terms and conditions first</h3>
+
+            <p class="popup__text">
+              Lorem ipsum dolor amet celiac poke fixie aesthetic, biodiesel food truck authentic squid. Schlitz vexillologist dreamcatcher la croix activated charcoal, offal fixie. Mustache butcher cray, snackwave lyft live-edge pop-up bitters distillery yr kinfolk vice fingerstache stumptown actually. Brunch roof party tbh, shaman tumeric crucifix tattooed. Ugh everyday carry artisan, cronut keffiyeh asymmetrical deep v farm-to-table food truck street art sustainable. Cardigan try-hard sriracha affogato, before they sold out activated charcoal cronut four dollar toast.
+            </p>
+
+            <div class="u-center-text u-margin-top-huge">
+              <a href="#" class="btn btn--green">Discover all tours</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </body>
 </html>
