@@ -9,6 +9,16 @@
   padding-left: 9rem;  // expand the padding to cover the nested shape content
   transform: skewX(-12deg);  // can't assign more than one transform property per element
 
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   &__shape {
     // shape-outside define size and position for content flowing
     // around the shape
@@ -28,6 +38,10 @@
     transform: translateX(-3rem) skewX(12deg);
 
     position: relative;  // positioning for child element
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
 
   &__img {
@@ -58,6 +72,10 @@
   &__text {
     // contrast text orientation in relation to background
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &:hover &__caption {
