@@ -98,6 +98,9 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * picture element for art direction
 * write media queries in HTML
 
+### Resolution switching with HTML
+* img srcset attribute, width descriptors and size attribute
+
 ### References
 Jonas Schmedtmann resources http://codingheroes.io/resources/
 Video background images https://coverr.co/
