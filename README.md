@@ -93,6 +93,11 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * @content and @iff sass directives
 * Chrome responsive design DevTool
 
+### Responsive images
+* img srcset attribute and source elements with density descriptors
+* picture element for art direction
+* write media queries in HTML
+
 ### References
 Jonas Schmedtmann resources http://codingheroes.io/resources/
 Video background images https://coverr.co/
@@ -106,3 +111,4 @@ Clip-path https://bennettfeely.com/clippy/
 Easing functions
 http://easings.net/#easeInOutBack
 Cubic-bezier http://cubic-bezier.com/#.17,.67,.83,.67
+Test responsive layout https://sizzy.co/
