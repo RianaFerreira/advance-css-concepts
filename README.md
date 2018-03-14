@@ -93,13 +93,17 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * @content and @iff sass directives
 * Chrome responsive design DevTool
 
-### Responsive images
+### Responsive images in HTML
 * img srcset attribute and source elements with density descriptors
 * picture element for art direction
 * write media queries in HTML
 
 ### Resolution switching with HTML
 * img srcset attribute, width descriptors and size attribute
+
+### Responsive images in CSS
+* resolution media queries to target high-res screens with 2x
+* combining multiple conditions in media queries
 
 ### References
 Jonas Schmedtmann resources http://codingheroes.io/resources/
