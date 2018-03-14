@@ -15,6 +15,10 @@
     // change for the button element
     border: none;
     cursor: pointer;
+
+    @include respond(tab-port) {
+      padding: 1rem 4rem;
+    }
   }
 
   &:hover {

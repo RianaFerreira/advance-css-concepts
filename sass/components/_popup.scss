@@ -27,12 +27,31 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(.25);
     transition: all .5s .2s;
+
+    @include respond(tab-land) {
+      height: 45rem;
+    }
+
+    @include respond(tab-port) {
+      height: 38rem;
+    }
+
+    @include respond(phone) {
+      height: 60rem;
+      width: 80%;
+    }
   }
 
   // Simulate a table to display the image and text content side-by-side
   &__left {
     display: table-cell;  // Allow the text to be positioned vertically in relation to the height of the combined images
     width: 33.333333%;
+
+    @include respond(phone) {
+      display: block;
+      margin: 0 auto;
+      width: 80%;
+    }
   }
 
   &__right {
@@ -41,11 +60,30 @@
 
     padding: 3rem 5rem;
     width: 66.666667%;
+
+    @include respond(tab-land) {
+      padding: 0 5rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 1rem 2rem;
+    }
+
+    @include respond(phone) {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+    }
   }
 
   &__img {
     display: block;
     width: 100%;
+
+    @include respond(phone) {
+      display: inline-block;
+      width: 49%;
+    }
   }
 
   &__text {
@@ -66,6 +104,20 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;  // dependant on the html tag having the language set
+
+    @include respond(tab-land) {
+      margin-bottom: 3rem;
+    }
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
+
+    @include respond(phone) {
+      -moz-column-count: unset;
+      column-count: unset;
+      margin-bottom: 0;
+    }
   }
 
   // State of popup when opened
@@ -94,6 +146,11 @@
       position: absolute;
       top: 2.5rem;
       right: 2.5rem;
+
+      @include respond(phone) {
+        top: 1rem;
+        right: 1rem;
+      }
     }
 
     &:hover {
