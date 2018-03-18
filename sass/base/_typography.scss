@@ -9,6 +9,7 @@ body {
 /* HEADING TEXT */
 .heading-primary {
   /* avoid the animation from moving up on completion */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   color: $color-white;
   margin-bottom: 6rem;

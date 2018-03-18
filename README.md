@@ -105,6 +105,11 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * resolution media queries to target high-res screens with 2x
 * combining multiple conditions in media queries
 
+### Browser compatibility
+* caniuse.com for modern css properties in production
+* graceful degradation with @supports
+* backdrop-filter
+
 ### References
 Jonas Schmedtmann resources http://codingheroes.io/resources/
 Video background images https://coverr.co/

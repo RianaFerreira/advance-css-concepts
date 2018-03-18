@@ -27,17 +27,26 @@
     float: left;
     height: 15rem;
     width: 15rem;
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
 
-    // shape of element the content flows around
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
 
     // contrast shape orientation in relation to background
     transform: translateX(-3rem) skewX(12deg);
 
     position: relative;  // positioning for child element
+    overflow: hidden;  // hide parts of image that overflow the container
+    border-radius: 50%;
+
+    @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+      // shape of element the content flows around
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+
+      // shape of content around the element
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);
+
+      border-radius: none;
+    }
 
     @include respond(phone) {
       transform: translateX(-3rem) skewX(0);
@@ -48,6 +57,7 @@
     height: 100%;  // restrict image to the parent element size
 
     // display image in center of shape and zoom in
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: translateX(-4rem) scale(1.4);
     transition: all .5s;
@@ -66,6 +76,7 @@
     opacity: 0;
     transform: translate(-50%, 20%);
     transition: all .5s;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 

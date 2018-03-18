@@ -9,12 +9,16 @@
   background-position: top;
   background-size: cover;
 
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  height: 95vh;
+  height: 85vh;
 
   /* Parent postion for logo and heading text */
   position: relative;
+
+  @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    height: 95vh;
+  }
 
   // Media query to target device resolution
   // Apple retina screen reference 192dpi
@@ -24,7 +28,10 @@
   // Media queries are always in em
   //   600px / 16 => 37.5em
   //   2000px / 16 => 125em
+
+  // Safari does not support min-resolution
   @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
     (min-width: 125em) {
     background-image: linear-gradient(
       to right bottom,
