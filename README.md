@@ -4,8 +4,12 @@
 ```
 $ cd project folder
 $ npm init
-$ npm install sass-node --save-dev  # compile scss to css
-$ npm install live-server -g        # auto reload app when css changes
+$ npm install sass-node --save-dev      # compile scss to css
+$ npm install live-server -g            # auto reload app when css changes
+$ npm install concat --save-dev         # concatenate multiple files
+$ npm install autoprefixer --save-dev   # auto prefix advanced css properties
+$ npm install postcss-cli --save-dev    # required by the autoprefixer lib
+$ npm install npm-run-all --save-dev    # run all the build process steps
 $ touch main.css
 ```
 
@@ -14,9 +18,25 @@ $ touch main.css
 ```
   $ live-server
 ```
+
 Continuously compile scss to css in another tab.
 ```
 $ npm run compile:sass
+```
+
+## CSS Build process individual steps
+Reference the package.json file for the script tasks
+
+```
+$ npm run compile:sass
+$ npm run concat:css
+$ npm run prefix:css
+$ npm run compress:css
+```
+
+## CSS all inclusive build command
+```
+$ npm run build:css
 ```
 
 Open the app in the browser with url `http://127.0.0.1:8080/`
