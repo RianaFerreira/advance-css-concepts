@@ -14,18 +14,30 @@ $ touch main.css
 ```
 
 ## Run the app
+Reference the package.json file for the scripts.
 
+
+Single script to start the development server and continuously compile sass to css.
 ```
-  $ live-server
+$ npm run start
 ```
 
-Continuously compile scss to css in another tab.
+Alternatively run the individual scripts in seperate CLI tabs.
+
+Run command in a seperate CLI tab.
+Start the development server.
 ```
-$ npm run compile:sass
+$ live-server
+```
+
+Run command in a seperate CLI tab.
+Watch for changes to sass files and automatically compile to css.
+```
+$ npm run watch:sass
 ```
 
 ## CSS Build process individual steps
-Reference the package.json file for the script tasks
+Reference the package.json file for the script tasks. The build process produces css/style.css which is referenced by the running server.
 
 ```
 $ npm run compile:sass
@@ -129,6 +141,18 @@ Open the app in the browser with url `http://127.0.0.1:8080/`
 * caniuse.com for modern css properties in production
 * graceful degradation with @supports
 * backdrop-filter
+
+
+### App behaviour customisations
+* Custom content highlighting style,
+* Only apply media queries to screens and not print.
+* Use alternative css media query to identify touch devices. Mobile devices with larger screens are confused with desktops, the only difference is that touch devices don't support hover.
+
+### Best practices
+* JS is needed for navigation option selected to display the correct section.
+* JS is needed to close popup when clicking anywhere outside the popup view.
+* use more variables
+* add comments to code
 
 ### References
 Jonas Schmedtmann resources http://codingheroes.io/resources/

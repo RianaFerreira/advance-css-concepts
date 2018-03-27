@@ -59,21 +59,21 @@
   // IF DIRECTIVE EXAMPLE
   // conditional check to determine behaviour
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) { @content };  // 600px / 16px => em value
+    @media only screen and (max-width: 37.5em) { @content };  // 600px / 16px => em value
   }
 
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) { @content };  // 900px / 16px => em value
+    @media only screen and (max-width: 56.25em) { @content };  // 900px / 16px => em value
   }
 
   @if $breakpoint == tab-land {
-    @media (max-width: 75em) { @content };  // 1200px / 16px => em value
+    @media only screen and (max-width: 75em) { @content };  // 1200px / 16px => em value
   }
 
   @if $breakpoint == big-desktop {
     // min-width is the minimum widt at which query applies
     // if less than 1800px won't apply
     // if more than or equal to 1800px will apply
-    @media (min-width: 112.5em) { @content };  // 1800 px / 16px => em value
+    @media only screen and (min-width: 112.5em) { @content };  // 1800 px / 16px => em value
   }
 }
